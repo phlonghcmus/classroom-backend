@@ -10,7 +10,7 @@ const port = process.env.PORT
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var classesRouter = require('./components/classes');
+var classesRouter = require('./components/classes/index');
 
 var app = express();
 

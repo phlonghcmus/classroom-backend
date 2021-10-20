@@ -2,7 +2,6 @@ const {db}=require('../../database/database');
 const ObjectId= require('mongodb').ObjectId;
 let classes;
 exports.list=async()=>{
-    console.log(db())
     const classesCollection=db().collection('classes');
     classes=await classesCollection.find().toArray();
     console.log(classes)
