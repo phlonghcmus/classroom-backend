@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 let database;
 // Create a new MongoClient
-const client = new MongoClient("mongodb+srv://admin:18120452@classroommanager.jgw7a.mongodb.net/test",{ useUnifiedTopology: true });
+const client = new MongoClient(process.env.MONGODB_URL,{ useUnifiedTopology: true });
 async function run() {
         // Connect the client to the server
         await client.connect()

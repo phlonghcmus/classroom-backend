@@ -3,7 +3,6 @@ const classesModel = require('./classesModel');
 exports.list = async (req, res, next)=>
 {
     const classes=await classesModel.list()
-    .catch(error => { throw error})
     res.json(classes)
 }
 exports.detail = async (req,res,next) =>{
