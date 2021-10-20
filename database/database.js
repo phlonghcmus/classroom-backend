@@ -5,11 +5,8 @@ const client = new MongoClient("mongodb+srv://admin:18120452@classroommanager.jg
 async function run() {
         // Connect the client to the server
         await client.connect()
-        .catch(error => { throw error})
         // Establish and verify connection
        database= await client.db("ClassroomManager")
-       .catch(error => { throw error})
-        console.log("Connected successfully to server");
 }
 
 run();
