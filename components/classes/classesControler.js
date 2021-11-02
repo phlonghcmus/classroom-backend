@@ -12,7 +12,10 @@ exports.detail = async (req,res,next) =>{
 exports.add = async (req,res,next) =>{
     item = {
         name: req.body.name,
-        user: req.body.user
+        user: req.body.user,
+        part: req.body.part,
+        theme: req.body.theme,
+        room: req.body.room
     }
     await classesModel.add(item)
     res.redirect("/classes");
